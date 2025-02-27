@@ -1,0 +1,52 @@
+
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: auto;
+  scroll-behavior: smooth;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: "Manrope", serif;
+  font-size : 16px; 
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+a {
+  font-size: 1em;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: all 0.15s ease-in-ease-out;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

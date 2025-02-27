@@ -1,0 +1,21 @@
+:root {
+    --border-color: #ffffff;
+    --text-color: #565973;
+    --text-muted-color: #9397ad;
+    --headline-color: #131022;
+    --background-color: #ffffff;
+    --section-background-color: #f3f6ff;
+    --link-color: #6366f1;
+    --green-color: #22c55e;
+    --nav-color: #33354d;
+    --button-background: #6366f1;
+    --button-text-color: #ffffff;
+  }
+  
+  [data-theme="dark"] {
+    --text-muted-color: #9397ad;
+    --nav-color: #ffffff;
+    --headline-color: #ffffff;
+    --background-color: #0b0f19;
+  }
+  

@@ -1,4 +1,32 @@
-.logo-container {
+@media (width < 768px) {
+    .logo-container {
+        display: none;
+    }
+}
+@media (width >= 968px) {
+    .logo-container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); 
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 0;
+        background-color: var(--background-color);
     
-   background-color: aqua;
+        .logo-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(233, 242, 251);
+            border: 1px solid black;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            width: 120px;
+            height: 70px;
+            
+            img {
+                width: 90px;
+                height: 50px;
+            }
+        }
+    }
 }

@@ -3,8 +3,7 @@ import "./Header.scss"
 
 const Header = () => {
   return (
-    <div> 
-        <div className="header-container">
+        <section className="header-container">
             <section className="header-main">
                 <div className="text">
                     <div className="titel">
@@ -40,9 +39,8 @@ const Header = () => {
             </div>
 
            
-        </div>
+        </section>
 
-    </div>
   )
 }
 

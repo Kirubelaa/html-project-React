@@ -7,9 +7,14 @@ import Logos from '../components/Logo/logo';
 const HomePage = () => {
   return (
     <Wrapper>
-        <Navbar />
-        <Header />
-        <Logos />
+      <header>
+         <Navbar />
+      </header>
+      <main>
+          <Header />
+          <Logos />
+      </main>
+     
         <h1>Welcome</h1>
     </Wrapper>
   )

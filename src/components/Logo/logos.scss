@@ -1,32 +1,73 @@
-@media (width < 768px) {
-    .logo-container {
-        display: none;
-    }
-}
-@media (width >= 968px) {
+.logo-managment {
+    background-color: var(--background-color);
+    padding: 4rem 0;
+    
     .logo-container {
         display: grid;
-        grid-template-columns: repeat(6, 1fr); 
+        grid-template-columns: repeat(6, 1fr);  // Börja med tablet-layout
+        gap: 1.5rem;
         justify-content: center;
         align-items: center;
-        padding: 5rem 0;
-        background-color: var(--background-color);
-    
-        .logo-box {
+
+        .logo-box1, .logo-box2,.logo-box3,.logo-box4,.logo-box5,.logo-box6 {
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgb(233, 242, 251);
-            border: 1px solid black;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            border: 1px solid var(--logo-border-color);
+            border-radius: 10px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
             padding: 10px;
             width: 120px;
             height: 70px;
-            
+          
             img {
                 width: 90px;
                 height: 50px;
             }
         }
+        @media (width >= 768px) {
+
+            .logo-box1, .logo-box2, .logo-box3, .logo-box4 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid var(--logo-border-color);
+                border-radius: 10px;
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+                padding: 10px;
+                width: 158px;
+                height: 98px;
+            }
+            .logo-box5, .logo-box6 {
+                display: none;
+            }
+
+            @media (width >= 968px) {
+
+                
+                .logo-box1, .logo-box2, .logo-box3, .logo-box4,  .logo-box5, .logo-box6 {
+                    display: flex;
+                    justify-content: center;
+                    padding: 10px;
+                    width: 130px;
+                    height: 80px;
+                }
+                img {
+                    width: 90px;
+                    height: 50px;
+                }
+    
+            }
+        }
+
+
     }
+
+    @media (width < 768px) {
+        .logo-container {
+            display: none;
+        }
+    }
+
+
 }

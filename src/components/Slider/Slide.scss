@@ -1,0 +1,112 @@
+.slider-managment {
+    margin: 1rem;
+    padding: 1rem 0;
+    background-color: var(--section-background-color);
+
+    .slider-titel {
+        display: grid;
+        text-align: center;
+
+        h1 {
+            font-size: 25px;
+            color: var(--headline-color);
+        }
+    }
+    .slider-images {
+
+        display: grid;
+        justify-content: center;
+
+        .second-img{
+            width: 260px;
+            
+        }
+
+        .first-img, .third-img {
+         display: none;
+        }
+        // slider-images -tablet
+        @media (width >= 678px) {
+                display: flex;
+                grid-template-columns: 1fr 1fr 1fr;
+
+            .first-img, .third-img, .second-img {
+                display: grid;
+                width: 200px;
+            }
+        }
+        // slider-images -disktop 
+        @media (width >= 968px){
+            display: flex;
+            justify-content: space-around;
+
+            .first-img, .third-img, .second-img {
+                display: grid;
+                width: 250px;
+            }
+        }
+     }
+
+     .image-titel {
+        padding: 1rem 0;
+        text-align: center;
+
+        .desktop-text {
+            display: none;
+        }
+
+        h1 {
+            font-family: sans-serif;
+            font-weight: 600;
+            font-size: 25px;
+            color: var(--headline-color);
+        }
+
+        .step-number {
+            display: none;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 25px;
+            width: auto;
+        }
+
+        @media (width >= 678px) {
+            justify-self: center;
+            width: 400px;
+            height: auto;
+
+            .step-number {
+                display: inline;
+            }
+            p {
+                font-size: 15px;
+                line-height: 25px;
+            }
+
+        }
+        @media (width >= 968px){
+
+            .phone-text {
+                display: none;
+            }
+            .desktop-text {
+                display: block;
+            }
+            h1 {
+                font-family: sans-serif;
+                font-weight: 600;
+                font-size: 20px;
+                color: var(--headline-color);
+            }
+            p {
+                text-align: center;
+                font-size: 10px;
+                line-height: 25px;
+                width: auto;
+            }
+        }
+      
+    }
+}

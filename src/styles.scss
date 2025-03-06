@@ -2,7 +2,10 @@
 @import './styles/reset';
 @import './styles/global';
 
-
+// scss collection 
 @import './components/Navbar/navbar';
 @import './components/Header/Header';
 @import './components/Logo/logos';
+@import './components/Features/features';
+@import './components/Slider/Slide';
+@import './components/DisktopFeature/DisktopFeature';

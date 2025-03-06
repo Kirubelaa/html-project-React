@@ -1,9 +1,33 @@
+.hero {
+    background-color: var(--section-background-color);
+    padding: 1rem 0;
+    outline: 2px solid rgb(0, 124, 128);
+    .hero-container {
+        width: 100%;
+        max-width: 1320px;  
+        margin: 0 auto;
+        padding: 0 ;  
+        outline: 2px solid red;
 
-
+        @media (min-width: 768px) {
+            width: 720px;
+        }
+        
+        @media (min-width: 992px) {
+            width: 960px;
+        }
+        
+        @media (min-width: 1400px) {
+            width: 1320px;
+        }
+        
+    }
+}
+   
 .header-container {
     display: grid;
     row-gap: 2rem;
-    background-color: var(--section-background-color); 
+    width: 100%;
     overflow: hidden;
     
     @media (width >= 768px) {
@@ -11,7 +35,7 @@
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
-    @media (width >= 960px) {
+    @media (width >= 990px) {
         padding-top: 3rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -20,6 +44,7 @@
         position: relative;
         
     }
+    
 
 }
 .header-main{
@@ -48,10 +73,10 @@
 
             h1{
                 color: var(--headline-color);
-                font-weight: 800;
+                font-weight: 600;
                 width: 294px;
                 height: 89px;
-                font-size: 36px;
+                font-size: 30px;
             }
           
         }
@@ -95,7 +120,7 @@
             gap: 1rem;
             margin-top: 5rem;
             padding-top: 8rem;
-            padding-left: 2.5rem;
+            padding-left: 1px;
             align-items: center;
 
             .appstore, .googleplay {
@@ -135,7 +160,10 @@
 @media (width >= 768px) {
 
     .header-main{
-        display: inline;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         .text{
             display: flex;
             margin-bottom: 0rem;
@@ -143,27 +171,26 @@
             .titel{
                 position: relative;
                 align-items: flex-end;
-                justify-content: flex-end;
-                margin-left: 28rem;
+                justify-content: center;
                 margin-top: 6rem;
+                margin-left: 20rem;
                 
                 h1{
-                    font-size: 2.2rem;
+                    font-size: 2rem;
                 }
             }
             .subtitel{
                 display: flex;
-                align-items: flex-end;
                 text-align: center;
                 align-items: center;
                 margin-top: 3rem;
                 padding-top: 6.9rem;
-                padding-left: 4rem ;
+                padding-left: 2rem ;
     
                p {
                     height: 118px;
                     width:270px;
-                    font-size: 21.91px;
+                    font-size: 19.5px;
                     text-align: start;
                     line-height: 35px;
                }
@@ -175,10 +202,11 @@
 @media (width >= 960px) {
     .header-main{
        display: grid;
-       justify-content: center;
+       grid-template-rows: 1fr;
+       justify-content: flex-start;
+       align-items: center;
        row-gap: 0;
-       padding-left: 1rem;
-    
+       margin-left: 6rem;
         .text {
             display: flex;
             justify-items: center;
@@ -193,7 +221,7 @@
                 h1{
                     margin: auto;
                     line-height: 1.3;
-                    font-size: 36px;     
+                    font-size: 25px;     
                     font-weight: 800;
                     color: var(--headline-color);
                 }
@@ -224,9 +252,8 @@
     display: none;
     @media (width >= 768px) {
         display: flex;
-        width: 375px;
         height: 410px;
-        margin-top: 5.5rem;   
+        margin-top: 5.5rem; 
 
         .left-img {
             margin-top: 8rem;
@@ -234,11 +261,9 @@
             border-radius: 50px;
         }
         .right-img {
-            position: absolute;
-            width: 243px;
-            height: 450px;
-            margin-left: 8rem;
-            margin-top: 1.3rem;
+          position: relative;
+          right: 8rem;
+          top: 1.5rem;
 
             img {
                 height: 440px;
@@ -248,20 +273,18 @@
     @media (width >= 960px) {
 
         display: flex;
-        margin: 0;
+        justify-content: flex-end;
         margin-top: 0;
-        margin-left: 5rem;
+        margin-left: 14rem;
+        
         .left-img {
             margin-top: 5rem;
             box-shadow: 1px 0px 25px 35px rgba(43, 39, 39, 0.2);
             border-radius: 50px;
-            margin-right: 5rem;
-         
         }
         .right-img {
             margin-top: 0rem;
-
-            position: absolute;
+            right: 8rem;
         }
     }
 }

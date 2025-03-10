@@ -6,6 +6,7 @@ import Logos from '../components/Logo/logo';
 import Features from '../components/Features/feature';
 import Slider from '../components/Slider/Slider';
 import DisktopFeature from '../components/DisktopFeature/DisktopFeature';
+import Faq from '../components/Faq/Faq';
 const HomePage = () => {
   return (
     <Wrapper>
@@ -18,6 +19,7 @@ const HomePage = () => {
           <Features />
           <Slider />
           <DisktopFeature />
+          <Faq/>
       </main>
      
         <h1>Welcome</h1>

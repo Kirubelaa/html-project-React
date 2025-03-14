@@ -1,0 +1,107 @@
+.testimonials {
+    padding: 1rem 0;
+
+    @media (width < 968px){
+        display: none;
+    }
+    
+    .testimonials-managment {
+        display: flex;
+        justify-content: space-around;
+        height: 342px;
+        background-color: var(--section-background-color);
+
+        .testimonials-title {
+
+            display: grid;
+            justify-content: center;
+            align-self: start;
+            width: 200px;
+            padding-top: 1rem;
+            height: 300px;
+            
+            h2 {
+                color: var(--headline-color);
+            }
+        }
+    }
+    
+    .testimonials-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem; 
+        max-width:auto;
+        height: 200px;
+        margin: auto;
+        
+
+        .rating {
+            display: flex;
+            gap: 5px;
+          
+            i {
+              font-size: 20px;
+              color: gray; 
+          
+              &.bi-star-fill {
+                color: gold; 
+              }
+            }
+          }
+          
+    }
+    
+    .testimonial-box {
+        bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2px;
+        height: 300px; 
+        padding: 1rem; 
+        border-radius: 10px; 
+        background-color: var(--background-color);
+        position: relative;
+            .comments {
+
+                width: 250px;
+                height: 150px;
+                p {
+                    font-size: 16.5px;
+                }
+              
+            }
+            .quote {
+                position: absolute; 
+                left: 2rem;
+                bottom: 2rem;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: center;
+                position: relative;
+                border: 1px solid var(--link-color);
+                border-radius: 5px;
+                width: 40px;
+                height: 40px;
+                background-color: var(--link-color);
+                i {
+                    font-size: 25px;
+                    color: var(--background-color);
+                }
+            }
+
+            .client {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                p {
+                    color: var(--headline-color);
+                    font-weight: 700;
+                }
+            }
+           
+    }
+
+
+    
+}

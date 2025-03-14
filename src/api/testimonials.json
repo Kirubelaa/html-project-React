@@ -1,0 +1,18 @@
+[
+    {
+      "rating": 4,
+      "id": 1,
+      "name": "Fannie Summers",
+      "role": "Designer",
+      "image": "/public/testimonials/fannie.svg",
+      "comment": "Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel."
+    },
+    {
+      "rating": 5,
+      "id": 2,
+      "name": "Albert Flores",
+      "role": "Developer",
+      "image": "/public/testimonials/albert.svg",
+      "comment": "Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet."
+    }
+  ]

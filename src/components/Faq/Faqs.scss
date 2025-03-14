@@ -1,6 +1,6 @@
 .faq {
     @media (width >= 968px) {
-        display: none;
+        
     }
     padding: 1rem 0;
     //Titel
@@ -8,6 +8,7 @@
 
         display: grid;
         text-align: center;
+
 
         h3 {
 
@@ -18,15 +19,32 @@
         p {
             color: var(--text-color);
         }
+        @media (width >= 678px ) {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 1rem;
+
+
+            h3 {
+                font-size: 32px;
+                width: 350px;
+            }
+            p {
+                width: 350px;
+            }
+        }
 
     }
     .faq-border {
         padding: 1rem 0;
         max-width: 800px;
         margin-top: 1.5rem;
-                
+       
 
         .border {
+            
             padding: 1rem;
             border-radius: 10px;
             box-sizing: border-box ;
@@ -41,10 +59,11 @@
                 color: var(--text-color);
             }
             .faq-answer {
+
                 margin-top: 1rem;
                 border: 1px solid var(--Faq-border-color);
                 box-sizing: border-box;
-                width: auto;
+
             }
 
             .border-questions {
@@ -53,24 +72,50 @@
                 align-items: center;
                 cursor: pointer;
 
-                i {
-                    width: 10px;
-                    height: 10px;
-                    font-size: 10px;
-                    font-weight: 800;
+                .arrow {
+                    display: flex;
+                    justify-content: center;
                     align-items: center;
-                    color: var(--link-color);
-                    transition: transform 0.3s ease;
+                    width: 35px;  
+                    height: 35px;
+                    border-radius: 50%; 
+                    background-color: var(--section-background-color); 
+                    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
-                    &:hover i {
-                        background-color: var(--link-color);
-                        transform: scale(1.2);
-                        color: aqua;
+                    i {
+                        width: 10px;
+                        height: 10px;
+                        font-size: 10px;
+                        align-items: center;
+                        color: var(--text-color);
+                        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out ;
+    
+                        &:hover i {
+                            background-color: var(--link-color);
+                        }
+                       
                     }
                 }
+                &.active {
+                    .arrow {
+                        background-color: var(--link-color); // Blå färg när öppen
+                        i {
+                            color: white; // Chevron blir vit när öppen
+                        }
+                    }
+                }
+
+             
              
             }
        
+        }
+
+        @media (width >= 678px) {
+
+            display: flex; // tablet
+            flex-direction: column;
+            row-gap: 10px; 
         }
       
     }

@@ -30,6 +30,7 @@ const Faq = () => {
   return (
     <section className="faq">
       <div className="container">
+        <div className="faq-managment">
         <div className="faq-titel">
           <h3>Any questions ? Check out the FaQs</h3>
           <p>Sitll have unanswered questions and need to get in touch ?</p>
@@ -54,13 +55,31 @@ const Faq = () => {
           ))}
         </div>
         <div className="contact">
-          <div className="contact-phone">
-              
+          <div className="contact-us">
+            <div className="phone-us">
+                <img src="./public/Faq/icon.svg" alt="" />
+                <p> Do you have any question ?</p>
+            </div>
+            <button className="phone-button">
+                <p>contact us</p> 
+                <i class="bi bi-arrow-right"></i>
+            </button>
           </div>
-          <div className="contact-sms">
-
+          <div className="contact-us">
+            <div className="sms-us">
+               <i class="bi bi-chat-dots"></i>
+               <p>Don't like phone calls ?</p>
+            </div>
+            <div className="button">
+            <button className="sms-button">
+                <p>contact us</p> 
+                <i class="bi bi-arrow-right"></i>
+            </button>
+            </div>
           </div>
         </div>
+        </div>
+      
       </div>
     </section>
   )

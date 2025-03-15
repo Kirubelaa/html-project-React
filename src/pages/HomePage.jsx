@@ -8,6 +8,8 @@ import Slider from '../components/Slider/Slider';
 import DisktopFeature from '../components/DisktopFeature/DisktopFeature';
 import Faq from '../components/Faq/Faq';
 import Testimonials from '../components/Testimonials/Testimonials';
+import Footer from '../components/Footer/Footer';
+import { Subscribe } from '../components/Susbscribe/Subscribe';
 
 const HomePage = () => {
   return (
@@ -23,8 +25,12 @@ const HomePage = () => {
           <DisktopFeature />
           <Testimonials /> 
           <Faq/>
+          <Subscribe/>
            
       </main>
+      <footer>
+          <Footer/>
+      </footer>
      
         <h1>Welcome</h1>
     </Wrapper>

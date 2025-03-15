@@ -1,8 +1,12 @@
 .faq {
-    @media (width >= 968px) {
-        
-    }
+   
     padding: 1rem 0;
+    display: grid;
+    grid-template-areas:
+        "faq-title"
+        "faq-questions"
+        "faq-contact";
+    gap: 2rem;
     //Titel
     .faq-titel {
 
@@ -98,9 +102,9 @@
                 }
                 &.active {
                     .arrow {
-                        background-color: var(--link-color); // Blå färg när öppen
+                        background-color: var(--link-color); 
                         i {
-                            color: white; // Chevron blir vit när öppen
+                            color: white; 
                         }
                     }
                 }
@@ -110,15 +114,139 @@
             }
        
         }
-
-        @media (width >= 678px) {
-
-            display: flex; // tablet
-            flex-direction: column;
-            row-gap: 10px; 
+    }
+    .contact {
+        display: none;
+    }
+    .responsive {
+        display: flex;
+        @media (width > 678px) {
+            display: none;
         }
-      
+    }
+ 
+ 
+
+    @media (width >= 678px) {
+
+        display: flex; 
+        flex-direction: column;
+        row-gap: 10px; 
+
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: flex-start;
+            gap: 1rem;
+            margin: auto;
+            padding: 2rem 1rem;
+        
+            .contact-us {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 1rem;
+                border: 2px solid var(--Faq-border-color);
+                padding: 1.5rem;
+                border-radius: 10px;
+                background-color: var(--background-color);
+                box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+                
+                .phone-us, .sms-us {
+                    align-items: center;
+                    gap: 0.8rem;
+                    font-size: 16px;
+                    color: var(--headline-color);
+        
+                    img {
+                        font-size: 24px;
+                       
+                    }
+                    i {
+                        font-size: 24px;
+                        color: green;
+                       
+                    }
+                }
+               
+        
+                button {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    cursor: pointer;
+                    transition: background-color 0.2s ease-in-out;
+        
+        
+                    i {
+                        font-size: 16px;
+                        transition: transform 0.2s ease-in-out;
+                    }
+        
+                    &:hover i {
+                        transform: translateX(5px); 
+                    }
+                    &.sms-button {
+                        color: var(--green-color);
+                    }
+                    &.phone-button {
+                        color: var( --button-background);
+                        
+                    }
+                }
+           
+            
+            }
+        }
     }
 
+    @media (width >= 968px){
+        .faq-managment {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 2rem;
+            align-items: start;
+            height: auto; 
+            max-height: 800px; 
+
+
+            grid-template-areas: 
+                "text    faq"  
+        }
+    
+        .faq-titel {
+            grid-area: text; 
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: start;
+
+        }
+    
+        .contact {
+            grid-area: text; 
+            align-self: flex-start;
+            margin-top: 10rem;
+        }
+    
+        .faq-border {
+          
+            grid-area: faq; 
+            overflow-y: auto; 
+            height: auto;
+            min-height: auto;   
+            max-height: 700px;
+            padding: 2rem; 
+            display: flex;
+            flex-direction: column;
+            gap: 1rem; 
+        }
+        
+    }
+
+    
 
 }

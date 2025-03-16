@@ -1,13 +1,12 @@
 .hero {
     background-color: var(--section-background-color);
     padding: 1rem 0;
-    outline: 2px solid rgb(0, 124, 128);
+    height: 475px;
     .hero-container {
         width: 100%;
         max-width: 1320px;  
         margin: 0 auto;
         padding: 0 ;  
-        outline: 2px solid red;
 
         @media (min-width: 768px) {
             width: 720px;
@@ -84,10 +83,10 @@
             width: 361px;
             height: 115px;
 
+
             p{
                 font-size: 18px;
-                font-weight: 400;
-                color: var(--text-muted-color);
+                font-weight: 460;
             }
         }
 
@@ -98,18 +97,62 @@
         text-align: center;
         row-gap: 1rem;
         
-
-        .appstore, .googleplay {
-            text-align: center;
-            border-radius: 10px;
-            background-color: #131022;
-            color: #131022;
-            border: 1px solid;
+        button {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; 
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            color: var( --headline-color);
+            background-color: var(--headline-color);
+            transition: transform 0.2s ease-in-out;
+    
+            i {
+                font-size: 20px;
+            }
+    
+            .text {
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                align-items: start;
+            }
+    
+            .small-text {
+                font-size: 8px; 
+                color: var( --text-muted-color);
+            }
+    
+            .big-text {
+                font-size: 12px; 
+                font-weight: bold;
+                color: var( --market-text-color);
+            }
+    
+        }
+    
+        .appstore {
+            i {
+                color: var( --market-text-color);
+            }
+        }
+    
+        .googleplay {
 
             img {
-                align-items: flex-start;
-                text-align: center;
-            } 
+                width: 25px;
+                height: 20px;
+            }
+            i {
+                font-size: 20px;
+                background: linear-gradient(to right, #00E3FF, #00F076, #C31162, #FF9C00);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
         
     }
@@ -126,7 +169,6 @@
             .appstore, .googleplay {
                 text-align: center;
                 border-radius: 10px;
-                background-color: var(--headline-color);
                 border: 10px solid;
                 
                 img {
@@ -140,14 +182,12 @@
     @media (width >= 960px) {
         .market-bins {
             display: flex;
-            justify-content: flex-end;
-            align-items: center;
             margin: 0;
             padding: 0;
             padding-left: 1rem;
             justify-content:space-around;
             gap: 2rem;
-            height: 10px;
+            height: 15px;
         }
         .appstore, .googleplay {
                 height: 40px;
@@ -208,10 +248,8 @@
        row-gap: 0;
        margin-left: 6rem;
         .text {
-            display: flex;
-            justify-items: center;
             row-gap: 0rem;
-            margin: 0;
+            
             .titel {
                 align-items: center;
                 text-align: start;
@@ -233,7 +271,7 @@
                 margin: 0;
                 padding: 0;
                 width: 350px;
-                padding-bottom: 2rem;
+                padding-bottom: 6rem;
                 p{
                     display: flex;
                     justify-content: center;
@@ -242,7 +280,7 @@
                     font-size: 11px;
                     margin-left: 2.35rem;
                     font-weight: 400;
-                    color: var(--text-color);
+                    color: var(--text-muted-color);
                 }
             }
         }
@@ -329,4 +367,3 @@
         margin-right: 2rem;
     }
 }
-

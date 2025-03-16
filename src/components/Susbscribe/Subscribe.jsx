@@ -11,8 +11,13 @@ export const Subscribe = () => {
                     <h4 className="subscribe-text">Subscribe to our newsletter to stay informed about latest updates</h4>
                 </div>
                 <div className="sub-rightbord">
-                    <input type="email" placeholder="Your email" className="email-input" />
-                    <button className="subscribe-button">Subscribe</button>
+                    <div className="email-container">
+                       <i className="bi bi-envelope"></i>
+                       <input type="email" placeholder="Your email" className="email-input" />
+                       <button className="subscribe-button">Subscribe</button>
+
+                    </div>
+
                 </div>
             </div>
         </div>
